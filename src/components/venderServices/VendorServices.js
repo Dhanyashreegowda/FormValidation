@@ -24,16 +24,11 @@ const VendorServices = () => {
           <h2 className="success_text">
             🎉 Congratulations! Vendor Details and Bank Details Completed
           </h2>
-          <p className="info_text">Do you want to submit the details?</p>
-          <div className="saveButtonn">
-            <Button type="primary" className="submit_btn" htmlType="submit">
-              Submit
-            </Button>
-          </div>
+          
         </Card>
       </Card>
     </div>
-  );
+  );      
 };
 
 export default VendorServices;

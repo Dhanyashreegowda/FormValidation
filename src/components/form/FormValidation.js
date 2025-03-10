@@ -5,6 +5,8 @@ import { Card } from 'antd';
 import { Steps } from 'antd';
 import { Country, State, City } from 'country-state-city';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useDispatch } from "react-redux";
+import { setVendorDetails } from "../../redux/formSlice";
 
 
 const { Option } = Select;
@@ -12,14 +14,26 @@ const { Option } = Select;
 const FormValidation = () => {
 
     const navigate = useNavigate(); // Initialize useNavigate
+    const dispatch = useDispatch();
 
     const onFinish = (values) => {
         console.log('Success:', values);
+        if(values){
+        localStorage.setItem("formData", JSON.stringify(values));
+        }
         // Handle form submission logic here
+        dispatch(setVendorDetails(values));
 
         // Navigate to the BankDetails page after successful submission
     navigate('/bank-details');
     };
+
+
+    // const  storegeData= localStorage.getItem("formData")
+    //  const parseData=JSON.parse(storegeData)
+
+    // console.log("AccountNumber", parseData.accountNumber)
+
 
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
@@ -78,7 +92,8 @@ const FormValidation = () => {
                 labelCol={{ span: 4 }}
                 wrapperCol={{ span: 20 }}
                 onFinish={onFinish}
-                onFinishFailed={onFinishFailed}>
+                onFinishFailed={onFinishFailed}
+                >
 
                     <Card className='forBorder'>
 

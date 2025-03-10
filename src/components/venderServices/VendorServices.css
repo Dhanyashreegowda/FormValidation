@@ -1,0 +1,137 @@
+/* Apply a nice background color */
+body {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the main card */
+.containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Styling for the first card */
+.first_cardd {
+    width: 60%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling for second card */
+.second_cardd {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Stepper Size */
+.step_size {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Headings */
+.main_head {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Success Message */
+.success_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #28a745;
+}
+
+/* Info Text */
+.info_text {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Submit Button */
+.submit_btn {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.submit_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Save Button Wrapper */
+.saveButtonn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+/* Tablets (Below 768px) */
+@media screen and (max-width: 768px) {
+    .first_cardd {
+        width: 80%;
+        padding: 20px;
+    }
+    .step_size {
+        width: 100%;
+    }
+    .main_head {
+        font-size: 20px;
+    }
+    .success_text {
+        font-size: 18px;
+    }
+    .info_text {
+        font-size: 14px;
+    }
+    .submit_btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile Screens (Below 480px) */
+@media screen and (max-width: 480px) {
+    .first_cardd {
+        width: 95%;
+        padding: 15px;
+    }
+    .step_size {
+        width: 100%;
+        font-size: 12px;
+    }
+    .main_head {
+        font-size: 18px;
+    }
+    .success_text {
+        font-size: 16px;
+    }
+    .info_text {
+        font-size: 12px;
+    }
+    .submit_btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

@@ -1,0 +1,179 @@
+/* Base styles for the form */
+.card_container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+.last_row_space{
+    padding-bottom: 30px;
+} 
+  .top_part {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .main_head {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .step_size {
+    margin-bottom: 20px;
+  }
+  
+  .forBorder {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .spacing {
+    margin-bottom: 16px;
+  }
+  
+  .saveButton {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .card_container {
+      padding: 15px;
+    }
+  
+    .main_head {
+      font-size: 22px;
+    }
+  
+    .heading {
+      font-size: 16px;
+    }
+  
+    .forBorder {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .card_container {
+      padding: 10px;
+    }
+  
+    .main_head {
+      font-size: 20px;
+    }
+  
+    .heading {
+      font-size: 14px;
+    }
+  
+    .forBorder {
+      padding: 10px;
+    }
+  
+    .spacing {
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card_container {
+      padding: 5px;
+    }
+  
+    .main_head {
+      font-size: 18px;
+    }
+  
+    .heading {
+      font-size: 12px;
+    }
+  
+    .forBorder {
+      padding: 5px;
+    }
+  
+    .spacing {
+      margin-bottom: 8px;
+    }
+  
+    .saveButton {
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card_container {
+      padding: 0;
+    }
+  
+    .main_head {
+      font-size: 16px;
+    }
+  
+    .heading {
+      font-size: 10px;
+    }
+  
+    .forBorder {
+      padding: 0;
+    }
+  
+    .spacing {
+      margin-bottom: 4px;
+    }
+  
+    .saveButton {
+      margin-top: 10px;
+    }
+  }
+  
+  /* Ensure form items stack vertically on small screens */
+  @media (max-width: 768px) {
+    .ant-col-lg-8,
+    .ant-col-md-8,
+    .ant-col-sm-24,
+    .ant-col-xs-24,
+    .ant-col-xl-8 {
+      width: 100%;
+    }
+  
+    .ant-row {
+      flex-direction: column;
+    }
+  
+    .ant-col {
+      margin-bottom: 16px;
+    }
+  }
+  
+  /* Adjust select dropdowns for smaller screens */
+  @media (max-width: 768px) {
+    .form-select {
+      width: 100%;
+    }
+  }
+  
+  /* Adjust input fields for smaller screens */
+  @media (max-width: 768px) {
+    .ant-input {
+      width: 100%;
+    }
+  }
+  
+  /* Adjust buttons for smaller screens */
+  @media (max-width: 768px) {
+    .ant-btn {
+      width: 100%;
+    }
+  }

@@ -863,4 +863,4 @@ const FormValidation = () => {
   )
 }
 
-export default FormValidation
+export default FormValidation;

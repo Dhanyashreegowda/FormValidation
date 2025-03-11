@@ -18,9 +18,9 @@ const FormValidation = () => {
 
     const onFinish = (values) => {
         console.log('Success:', values);
-        if(values){
-        localStorage.setItem("formData", JSON.stringify(values));
-        }
+        // if(values){
+        // localStorage.setItem("formData", JSON.stringify(values));
+        // }
         // Handle form submission logic here
         dispatch(setVendorDetails(values));
 
@@ -107,8 +107,8 @@ const FormValidation = () => {
                                 <Col lg={8} md={8} sm={24} xs={24} xl={8}>
                                 <Form.Item 
                                         layout="vertical"
-                                        label="Company Name"
-                                        name="Company Name"
+                                        label="CompanyName"
+                                        name="CompanyName"
                                         rules={[
                                             {
                                                 required: true,
@@ -138,7 +138,7 @@ const FormValidation = () => {
                                 <Col lg={8} md={8} sm={24} xs={24} xl={8}>
                                 <Form.Item
                                         layout="vertical"
-                                        label="Company type"
+                                        label="Companytype"
                                         name="companyType"
                                         rules={[{ required: true }]}
                                         labelCol={{ span: 24 }}
@@ -179,13 +179,13 @@ const FormValidation = () => {
                         <div className='heading'>
                             <h4>Contact Information</h4>
                         </div>
-                        <Row gutter={[24,24]}>
+                        <Row gutter={[24,24]} className='last_row_space' >
 
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
-                                label="First Name"
-                                name="First Name"
+                                label="FirstName"
+                                name="FirstName"
                                 rules={[
                                     {
                                         required: true,
@@ -218,8 +218,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
-                                label="Middle Name"
-                                name="Middle Name"
+                                label="MiddleName"
+                                name="MiddleName"
                                 rules={[
                                     {
                                         validator: (_, value) => {
@@ -250,8 +250,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
-                                label="Last Name"
-                                name="Last Name"
+                                label="LastName"
+                                name="LastName"
                                 rules={[
                                     {
                                         required: true,
@@ -283,13 +283,13 @@ const FormValidation = () => {
 
 
 
-                        <Row gutter={[24,24]}>
+                        <Row gutter={[24,24]} className='last_row_space' >
 
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
                                 label="Email Id"
-                                name="Email Id"
+                                name="EmailId"
                                 rules={[
                                     {
                                         required: true,
@@ -320,8 +320,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
-                                label="Alternate Email Id"
-                                name="Alternate Email Id"
+                                label="AlternateEmailId"
+                                name="AlternateEmailId"
                                 rules={[
                                     {
                                         validator: (_, value, { getFieldValue }) => {
@@ -355,7 +355,7 @@ const FormValidation = () => {
                         <Form.Item
                                 layout="vertical"
                                 label="Mobile Number"
-                                name="Mobile Number"
+                                name="MobileNumber"
                                 rules={[
                                     {
                                         required: true,
@@ -381,13 +381,13 @@ const FormValidation = () => {
 
                         </Row>
 
-                        <Row gutter={[24,24]}>
+                        <Row gutter={[24,24]} className='last_row_space' >
 
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                                 layout="vertical"
-                                label="Alternate Number"
-                                name="Alternate Number"
+                                label="AlternateNumber"
+                                name="AlternateNumber"
                                 rules={[
                                     {
                                         validator: (_, value) => {
@@ -464,13 +464,13 @@ const FormValidation = () => {
                         </Col>
                         </Row>
 
-                        <Row gutter={[24,24]}>
+                        <Row gutter={[24,24]} className='last_row_space' >
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={12}>
 
                         <Form.Item
                                 layout="vertical"
-                                label="Address Line 1"
-                                name="Address Line 1"
+                                label="AddressLine1"
+                                name="AddressLine1"
                                 rules={[
                                     {
                                         required: true,
@@ -500,8 +500,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={12}>
                         <Form.Item
                                 layout="vertical"
-                                label="Address Line 2"
-                                name="Address Line 2"
+                                label="AddressLine2"
+                                name="AddressLine2"
                                 rules={[
                                     {
                                         validator: (_, value) => {
@@ -530,7 +530,7 @@ const FormValidation = () => {
                         </Row>
                         
                         
-                        <Row gutter={[24,24]}>
+                        <Row gutter={[24,24]} className='last_row_space'>
                         <Col className='spacing' lg={7} md={7} sm={16} xs={16} xl={6}>
                         <Form.Item
                                 layout="vertical"
@@ -560,7 +560,7 @@ const FormValidation = () => {
                         <Form.Item
                                 layout="vertical"
                                 label="Division/Taluk"
-                                name="Division/Taluk"
+                                name="DivisionTaluk"
                                 rules={[
                                     {
                                         required: true,
@@ -593,7 +593,7 @@ const FormValidation = () => {
                         <Form.Item
                                 layout="vertical"
                                 label="Village/Area/Ward/Block"
-                                name="Village/Area/Ward/Block"
+                                name="VillageAreaWardBlock"
                                 rules={[
                                     {
                                         required: true,
@@ -624,8 +624,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={7} md={7} sm={16} xs={16} xl={6}>
                         <Form.Item
                                 layout="vertical"
-                                label="Zip/Pin Code"
-                                name="Zip/Pin Code"
+                                label="Zip/PinCode"
+                                name="ZipPinCode"
                                 rules={[
                                     {
                                         required: true,
@@ -660,8 +660,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                         layout="vertical"
-                        label="CIN No."
-                        name="CIN No."
+                        label="CINNo."
+                        name="CINNo"
                         rules={[
                             {
                                 required: true,
@@ -691,8 +691,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                             layout="vertical"
-                            label="GST No."
-                            name="GST No."
+                            label="GSTNo."
+                            name="GSTNo"
                             rules={[
                                 {
                                     required: true,
@@ -722,8 +722,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                             layout="vertical"
-                            label="PAN No."
-                            name="PAN No."
+                            label="PANNo."
+                            name="PANNo"
                             rules={[
                                 {
                                     required: true,
@@ -756,8 +756,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                     layout="vertical"
-                    label="TAN No."
-                    name="TAN No."
+                    label="TANNo."
+                    name="TANNo"
                     rules={[
                         {
                             required: true,
@@ -787,9 +787,9 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                         layout="vertical"
-                        label="Trade Name or Trade No."
-                        name="Trade Name or Trade No."
-                        rules={[
+                        label="TradeNameorTradeNo"
+                        name="TradeNameorTradeNo"
+                        rules={[ 
                             {
                                 required: true,
                                 validator: (_, value) => {
@@ -817,8 +817,8 @@ const FormValidation = () => {
                         <Col className='spacing' lg={8} md={8} sm={24} xs={24} xl={8}>
                         <Form.Item
                             layout="vertical"
-                            label="Factory License No."
-                            name="Factory License No."
+                            label="Factory LicenseNo."
+                            name="FactoryLicenseNo"
                             rules={[
                                 {
                                     required: true,

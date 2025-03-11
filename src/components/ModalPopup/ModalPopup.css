@@ -1,0 +1,115 @@
+/* ModalPopup.css */
+
+/* Custom modal width and styling */
+.custom-modal .ant-modal-content {
+    width: 800px; /* Set the width of the modal */
+    border-radius: 10px; /* Rounded corners */
+    padding: 24px; /* Add padding inside the modal */
+  }
+  
+  /* Modal header styling */
+  .custom-modal .ant-modal-header {
+    border-bottom: 1px solid #e8e8e8; /* Add a subtle border */
+    padding-bottom: 16px; /* Add padding to the header */
+  }
+  
+  .custom-modal .ant-modal-title {
+    font-size: 20px; /* Increase title font size */
+    font-weight: 600; /* Make the title bold */
+    color: #333; /* Darker text color */
+  }
+  
+  /* Modal body styling */
+  .modal-content {
+    font-size: 14px; /* Set base font size */
+    color: #555; /* Slightly darker text color */
+  }
+  
+  .success-message {
+    font-size: 16px; /* Larger font size for success message */
+    font-weight: 500; /* Medium font weight */
+    color: #52c41a; /* Green color for success */
+    margin-bottom: 20px; /* Add space below the message */
+  }
+  
+  /* Section title styling */
+  .section-title {
+    font-size: 18px; /* Larger font size for section titles */
+    font-weight: 500; /* Medium font weight */
+    color: #333; /* Darker text color */
+    margin-bottom: 12px; /* Add space below the title */
+  }
+  
+  /* Details container styling */
+  .details-container {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 16px; /* Add padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #e8e8e8; /* Add a subtle border */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  /* Horizontal data layout */
+  .horizontal-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Remove gap between rows */
+  }
+  
+  .keys-row,
+  .values-row {
+    display: flex;
+    gap: 0; /* Remove gap between items */
+  }
+  
+  .key-item,
+  .value-item {
+    flex: 1; /* Distribute space evenly */
+    min-width: 120px; /* Minimum width for each item */
+    padding: 8px;
+    background-color: #fff; /* White background for items */
+    border: 1px solid #e8e8e8; /* Add a subtle border */
+    text-align: center; /* Center-align text */
+  }
+  
+  .key-item {
+    font-weight: 600; /* Bold font for keys */
+    background-color: #f0f0f0; /* Light gray background for keys */
+    border-bottom: none; /* Remove bottom border for keys */
+  }
+  
+  .value-item {
+    border-top: none; /* Remove top border for values */
+  }
+  
+  /* Footer button styling */
+  .modal-button {
+    margin-right: 8px; /* Add space between buttons */
+    border-radius: 4px; /* Rounded corners for buttons */
+    font-weight: 500; /* Medium font weight */
+  }
+  
+  /* Primary button styling */
+  .modal-button.ant-btn-primary {
+    background-color: #1890ff; /* Blue background for primary button */
+    border-color: #1890ff; /* Blue border for primary button */
+  }
+  
+  .modal-button.ant-btn-primary:hover {
+    background-color: #40a9ff; /* Lighter blue on hover */
+    border-color: #40a9ff; /* Lighter blue border on hover */
+  }
+  
+  /* Back button styling */
+  .modal-button:not(.ant-btn-primary) {
+    background-color: #f5f5f5; /* Light gray background */
+    border-color: #d9d9d9; /* Light gray border */
+    color: #333; /* Darker text color */
+  }
+  
+  .modal-button:not(.ant-btn-primary):hover {
+    background-color: #e6e6e6; /* Slightly darker gray on hover */
+    border-color: #d9d9d9; /* Light gray border on hover */
+  }
+
+  

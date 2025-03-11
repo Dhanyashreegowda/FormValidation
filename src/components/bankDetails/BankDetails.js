@@ -1,51 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import "./BankDetails.css";
-import { Card, Steps, Form, Input, Button, Row, Col, Modal } from "antd";
+import { Card, Steps, Form, Input, Button, Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { setBankDetails } from "../../redux/formSlice";
-
-
+import { useSelector } from "react-redux";
 
 const BankDetails = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  // Fetch stored vendor details from Redux
   const vendorDetails = useSelector((state) => state.form.vendorDetails);
-  const bankDetails = useSelector((state) => state.form.bankDetails);
 
   const onFinish = (values) => {
     console.log("Success:", values);
-    if(values){
+    if (values) {
       localStorage.setItem("formData", JSON.stringify(values));
-      }
+    }
 
-      dispatch(setBankDetails(values));
-    setIsModalVisible(true); // Show the modal
+    // Navigate to the ModalPopup component with the form data and vendor details
+    navigate("/modal-content", { state: { bankDetails: values, vendorDetails } });
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false); // Hide the modal
-    navigate("/vendor-services"); // Navigate to the next page
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false); // Hide the modal
-  };
-
-  // Function to display all stored data dynamically
-  const renderData = (data) => {
-    return Object.entries(data || {}).map(([key, value]) => (
-      <p key={key}>
-        <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong> {value || "N/A"}
-      </p>
-    ));
   };
 
   return (
@@ -150,25 +124,8 @@ const BankDetails = () => {
           </div>
         </Form>
       </Card>
-
-      {/* Modal for successful submission */}
-      <Modal
-        title="Success"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Bank details and Vendor details submitted successfully!</p>
-
-        <h3>Vendor Details:</h3>
-        {renderData(vendorDetails)}
-
-        <h3>Bank Details:</h3>
-        {renderData(bankDetails)}
-      </Modal>
     </div>
   );
 };
 
 export default BankDetails;
-
